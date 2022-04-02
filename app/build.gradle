@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 28
 
     defaultConfig {
         applicationId "com.hc.flowlayout"
         minSdk 25
-        targetSdk 32
+        targetSdk 28
         versionCode 1
         versionName "1.0"
 
@@ -38,5 +38,6 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.airbnb.android:lottie:2.8.0'
+
 
 }
