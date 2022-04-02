@@ -1,4 +1,6 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.mode;
+
+import com.hc.flowlayout.mode.Observe;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,13 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.hc.flowlayout.R;
+
 import java.util.List;
 
-public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.MyHolder> {
+public class MyAdapter2 extends RecyclerView.Adapter<MyAdapter2.MyHolder> {
     List<Integer> data;
     Context context;
 
-    public MyAdapter3(List<Integer> data, Context context) {
+    public MyAdapter2(List<Integer> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -23,7 +25,7 @@ public class MyAdapter3 extends RecyclerView.Adapter<MyAdapter3.MyHolder> {
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item3, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item2, parent, false);
         return new MyHolder(view);
     }
 

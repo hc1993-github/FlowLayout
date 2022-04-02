@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.myview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.hc.flowlayout.R;
 
 public class MyView2 extends View {
     Paint paint;
@@ -36,7 +38,7 @@ public class MyView2 extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.RED);
         paint.setStrokeWidth(150);
-        srcBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.cat,null);
+        srcBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cat,null);
         destBitmap = Bitmap.createBitmap(srcBitmap.getWidth(),srcBitmap.getHeight(), Bitmap.Config.ARGB_8888);
         cans = new Canvas(destBitmap);
         path = new Path();

@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.adapter;
 
 public interface ItemTouchListener {
     boolean onItemMove(int start,int end);

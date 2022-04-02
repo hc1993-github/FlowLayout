@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.hc.flowlayout.myview.MyView2;
+
 public class FiveActivity extends AppCompatActivity {
     MyView2 myView2;
     @Override

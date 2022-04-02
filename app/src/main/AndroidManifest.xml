@@ -21,7 +21,7 @@
             android:name=".SevenActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FirstActivity"
             android:exported="false" />
         <activity
             android:name=".FiveActivity"

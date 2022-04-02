@@ -3,14 +3,14 @@ package com.hc.flowlayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
-public class SixActivity extends AppCompatActivity implements Observe{
+import com.hc.flowlayout.mode.Observe;
+import com.hc.flowlayout.mode.Observeb;
+
+public class SixActivity extends AppCompatActivity implements Observe {
     Observeb observeb;
     TextView editText;
     @Override

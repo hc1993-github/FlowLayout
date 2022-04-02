@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.other;
 
 import android.util.Log;
 import android.view.View;

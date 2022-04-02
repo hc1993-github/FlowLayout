@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.flowlayout;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.myview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,6 +14,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
+
+import com.hc.flowlayout.R;
 
 public class MyView extends View {
     Paint mPaint;
@@ -32,7 +34,7 @@ public class MyView extends View {
         mPaint.setColor(Color.RED);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(150);
-        textBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.remote,null);
+        textBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.remote,null);
         srcBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.cat,null);
         destBitmap = Bitmap.createBitmap(srcBitmap.getWidth(),srcBitmap.getHeight(), Bitmap.Config.ARGB_8888);
         mPath = new Path();
