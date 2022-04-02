@@ -18,7 +18,6 @@ public class SkinLoader {
     private String srcPackageName;
     private String skinPackageName;//皮肤包名
     private Resources resources;//资源管理对象
-    private boolean loaded = false;
     private SkinLoader() {
     }
     public static SkinLoader getInstance(){
@@ -40,16 +39,11 @@ public class SkinLoader {
             addAssetPath.setAccessible(true);
             addAssetPath.invoke(assetManager,skinApkPath);
             resources = new Resources(assetManager,context.getResources().getDisplayMetrics(),context.getResources().getConfiguration());
-            if(resources!=null){
-                loaded = true;
-            }
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-    public boolean isLoaded(){
-        return loaded;
-    }
+
     public int getColorId(int srcId){
         if(resourcesIsNull()){
             return getSrcColorId(srcId);

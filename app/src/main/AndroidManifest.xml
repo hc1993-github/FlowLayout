@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowLayout">
         <activity
+            android:name=".NineActivity"
+            android:exported="false" />
+        <activity
             android:name=".SevenActivity"
             android:exported="false" />
         <activity
