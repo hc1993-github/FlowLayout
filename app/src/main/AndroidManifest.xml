@@ -15,8 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowLayout">
         <activity
-            android:name=".NineActivity"
+            android:name=".EightActivity"
             android:exported="false" />
+        <activity
+            android:name=".NineActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="hc" android:scheme="test"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SevenActivity"
             android:exported="false" />
@@ -39,7 +49,7 @@
             android:name=".SixActivity"
             android:exported="false" />
         <activity
-            android:name=".EightActivity"
+            android:name=".TenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
