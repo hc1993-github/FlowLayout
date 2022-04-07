@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ElvenActivity">
 
-    <com.hc.flowlayout.SwitchButton
+    <com.hc.flowlayout.myview.SwitchButton
         android:layout_width="200dp"
         android:layout_height="100dp"
         app:layout_constraintBottom_toBottomOf="parent"

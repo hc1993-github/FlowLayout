@@ -1,4 +1,4 @@
-package com.hc.flowlayout;
+package com.hc.flowlayout.myview;
 
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;
