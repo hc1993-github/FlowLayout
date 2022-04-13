@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowLayout">
         <activity
+            android:name=".ProxyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ElvenActivity"
+            android:exported="false" />
+        <activity
             android:name=".TenActivity"
             android:exported="false" />
         <activity
@@ -56,7 +62,7 @@
             android:name=".SixActivity"
             android:exported="false" />
         <activity
-            android:name=".ElvenActivity"
+            android:name=".TwelvActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
