@@ -14,11 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowLayout">
-        <!--跨进程通信-->
+        <activity
+            android:name=".ThirteenActivity"
+            android:exported="false" />
+        <!-- 跨进程通信 -->
         <activity
             android:name=".FourteenActivity"
             android:exported="false"
-            android:process=":F"/>
+            android:process=":F" />
         <activity
             android:name=".TwelvActivity"
             android:exported="false" />
@@ -28,7 +31,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.hc.flowlayout.ipc.MyService"/>
+                <action android:name="com.hc.flowlayout.ipc.MyService" />
             </intent-filter>
         </service>
 
@@ -80,7 +83,7 @@
             android:name=".SixActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirteenActivity"
+            android:name=".FifiteenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
