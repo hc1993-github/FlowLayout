@@ -15,9 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FlowLayout">
         <activity
-            android:name=".ThirteenActivity"
+            android:name=".FifiteenActivity"
             android:exported="false" />
-        <!-- 跨进程通信 -->
+        <activity
+            android:name=".ThirteenActivity"
+            android:exported="false" /> <!-- 跨进程通信 -->
         <activity
             android:name=".FourteenActivity"
             android:exported="false"
@@ -83,7 +85,7 @@
             android:name=".SixActivity"
             android:exported="false" />
         <activity
-            android:name=".FifiteenActivity"
+            android:name=".SixteenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
