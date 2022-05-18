@@ -9,20 +9,22 @@ import java.lang.reflect.Proxy;
 
 public class HookUtil2 {
     public static void hook(Activity activity){
-        Method[] declaredMethods = activity.getClass().getDeclaredMethods();
-        for(Method method:declaredMethods){
-            MyOnClick myOnClick = method.getAnnotation(MyOnClick.class);
-            if(myOnClick!=null){
-                int id = myOnClick.value();
-                View view = activity.findViewById(id);
-
-                Object proxyInstance = Proxy.newProxyInstance(activity.getClassLoader(), new Class[]{View.OnClickListener.class}, new MyInvocationHandler(activity,method));
-                try {
-                    Method setOnClickListener = view.getClass().getMethod("setOnClickListener", View.OnClickListener.class);
-                    setOnClickListener.invoke(view,proxyInstance);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        try {
+            Method[] declaredMethods = activity.getClass().getDeclaredMethods();
+            for(Method method:declaredMethods){
+                MyOnClick myOnClick = method.getAnnotation(MyOnClick.class);
+                if(myOnClick!=null){
+                    int id = myOnClick.value();
+                    //View view = activity.findViewById(id);
+                    Method findViewById = activity.getClass().getMethod("findViewById", int.class);
+                    View view = (View) findViewById.invoke(activity, id);
+                    Object proxyInstance = Proxy.newProxyInstance(activity.getClassLoader(), new Class[]{View.OnClickListener.class}, new MyInvocationHandler(activity,method));
+                    try {
+                        Method setOnClickListener = view.getClass().getMethod("setOnClickListener", View.OnClickListener.class);
+                        setOnClickListener.invoke(view,proxyInstance);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
 //                view.setOnClickListener(new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
@@ -33,7 +35,10 @@ public class HookUtil2 {
 //                        }
 //                    }
 //                });
+                }
             }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
     private static class MyInvocationHandler implements InvocationHandler{
